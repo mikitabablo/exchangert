@@ -1,0 +1,9 @@
+services:
+    app:
+        build: .
+        ports:
+            - "8080:8088"
+        volumes:
+            - ./.env:/app/.env
+        environment:
+            - CONFIG_PATH=/app/.env
