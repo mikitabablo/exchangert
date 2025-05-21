@@ -23,7 +23,7 @@ type Server struct {
 }
 
 func LoadConfig() (*Config, error) {
-//	err := godotenv.Load("../../.env")
+	//	err := godotenv.Load("../../.env")
 	err := godotenv.Load(".env")
 	if err != nil {
 		return nil, fmt.Errorf("failed to load .env: %v", err)

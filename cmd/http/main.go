@@ -2,13 +2,14 @@ package main
 
 import (
 	"context"
-	"github.com/mikitabablo/exchangert/config"
-	"github.com/mikitabablo/exchangert/internal/app"
 	"log"
 	"os"
 	"os/signal"
 	"syscall"
 	"time"
+
+	"github.com/mikitabablo/exchangert/config"
+	"github.com/mikitabablo/exchangert/internal/app"
 )
 
 func main() {

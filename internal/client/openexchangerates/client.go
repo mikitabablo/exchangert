@@ -3,10 +3,11 @@ package openexchangerates
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/mikitabablo/exchangert/internal/domain"
 	"net/http"
 	"strings"
 	"time"
+
+	"github.com/mikitabablo/exchangert/internal/domain"
 )
 
 type Client struct {

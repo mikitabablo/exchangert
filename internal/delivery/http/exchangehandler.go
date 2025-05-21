@@ -1,10 +1,11 @@
 package http
 
 import (
-	"github.com/gin-gonic/gin"
-	"github.com/mikitabablo/exchangert/internal/domain"
 	"net/http"
 	"strconv"
+
+	"github.com/gin-gonic/gin"
+	"github.com/mikitabablo/exchangert/internal/domain"
 )
 
 type ExchangeHandler struct {

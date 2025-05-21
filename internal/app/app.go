@@ -4,14 +4,14 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"net/http"
+
+	"github.com/gin-gonic/gin"
 	"github.com/mikitabablo/exchangert/config"
 	"github.com/mikitabablo/exchangert/internal/client/crypto"
 	"github.com/mikitabablo/exchangert/internal/client/openexchangerates"
 	deliveryhttp "github.com/mikitabablo/exchangert/internal/delivery/http"
 	"github.com/mikitabablo/exchangert/internal/usecase"
-	"net/http"
-
-	"github.com/gin-gonic/gin"
 )
 
 type App struct {
@@ -33,7 +33,6 @@ func NewApp(cfg *config.Config) *App {
 	cryptoProvider := crypto.NewStaticDataProvider()
 	cryptoUsecase := usecase.NewCryptoUsecase(cryptoProvider)
 	exchangeHandler := deliveryhttp.NewExchangeHandler(cryptoUsecase)
-
 
 	engine := gin.Default()
 	engine.GET("/rates", ratesHandler.GetRates)

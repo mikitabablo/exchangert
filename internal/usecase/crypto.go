@@ -2,8 +2,9 @@ package usecase
 
 import (
 	"errors"
-	"github.com/mikitabablo/exchangert/internal/domain"
 	"math"
+
+	"github.com/mikitabablo/exchangert/internal/domain"
 )
 
 type CryptoUsecase struct {

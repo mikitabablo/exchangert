@@ -3,7 +3,7 @@ package domain
 import "context"
 
 type FiatRatesProvider interface {
-    GetRates(base string, symbols []string) (*RatesResponse, error)
+	GetRates(base string, symbols []string) (*RatesResponse, error)
 }
 
 type FiatUsecase interface {
